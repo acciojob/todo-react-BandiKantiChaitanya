@@ -8,12 +8,14 @@ function Todo({tasks,setTasks}) {
     }
   return (
     <div>
+        <ul>
         {tasks.map((task,index)=>(
-            <div key={index} className='todo-item' >
+            <li key={index} className='todo-item' >
             <p style={{ margin: 0 }} >{task}</p>
             <button onClick={()=>{handleRemove(index)}} >Remove task</button>
-            </div>
+            </li>
         ))}
+        </ul>
     </div>
   )
 }
